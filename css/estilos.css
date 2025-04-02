@@ -1,0 +1,485 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+    margin: 1.5rem;
+     font-family: "Poppins", serif;
+}
+
+.gran-contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 1.5rem; /* Esto se aplica por defecto */
+}
+
+
+
+
+
+.lista-banners {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.lista-banners .caja-banner img {
+    width: 100%;
+    height: auto;
+      cursor:pointer;
+      transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+
+
+.lista-rectanculos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin:40px 0px;
+}
+
+.caja-rectangulo{
+    position: relative;
+
+}
+
+.precio{
+    position: absolute;
+    bottom: 0;
+    background:#1c1c1c;
+    padding: 20px;
+    width: 100%;
+}
+
+
+.precio p{
+   margin: 0px;
+   color:#fff;
+   text-align: center;
+   font-size:15px;
+}
+.lista-rectanculos .caja-rectangulo img {
+     cursor:pointer;
+    width: 100%;
+    height:450px;
+    object-fit: cover; /* Recorta la imagen para llenar el espacio */
+      transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+
+
+
+.caja-circulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+    margin-bottom:10px;
+}
+
+.circulo-valhalla {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    background:#ff0000;
+    border: 4px solid #000000;
+    border-radius: 50%;
+    padding:5px;
+}
+
+.circulo-valhalla img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.capedu-nombre{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.capedu-nombre p {
+    font-size: 20px;
+    font-weight: 600;
+    margin:0px;
+       text-align:center;
+}
+
+.capedu-nombre span{
+     font-size: 16px;
+    font-weight: 400;
+    margin:0px;
+    text-align:center;
+}
+
+.capedu-redes {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.caja-red {
+    cursor: pointer;
+    width:35px;
+}
+
+.caja-red svg {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, fill 0.3s ease; /* Transición suave */
+}
+
+.caja-red:hover svg {
+    transform: scale(1.5); /* Aumenta ligeramente el tamaño */
+    fill: #0E2B6D; /* Cambia el color (ajústalo según el diseño) */
+}
+
+
+.mensaje-exito, .mensaje-error {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745; /* Verde para éxito */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    z-index: 1000;
+    text-align: center;
+    min-width: 200px; /* Ajusta según necesidad */
+}
+
+.mensaje-error {
+    background-color: #dc3545; /* Rojo para error */
+}
+
+
+@media (min-width: 992px) and (max-width: 1300px) {
+  
+    .gran-contenedor {
+  
+    gap:10px;
+}
+
+.lista-rectanculos {
+    display: grid
+;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+.lista-rectanculos .caja-rectangulo img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+.capedu-nombre p {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0px;
+    text-align: center;
+}
+
+.capedu-nombre span {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px;
+    text-align: center;
+}
+.circulo-valhalla {
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+}
+.caja-red {
+    cursor: pointer;
+    width:30px;
+}.precio {
+    position: absolute;
+    bottom: 0;
+    background: #1c1c1c;
+    padding: 3px;
+    width: 100%;
+}.precio p{
+    font-size:12px
+}
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+     .container{
+        width:100% !important;
+    }
+    .gran-contenedor {
+  
+    gap:10px;
+}
+
+.lista-rectanculos {
+    display: grid
+;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+.lista-rectanculos .caja-rectangulo img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.capedu-nombre p {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0px;
+    text-align: center;
+}
+
+.capedu-nombre span {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0px;
+    text-align: center;
+}
+.circulo-valhalla {
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+}
+.caja-red {
+    cursor: pointer;
+    width:28px;
+}.precio {
+    position: absolute;
+    bottom: 0;
+    background: #1c1c1c;
+    padding: 3px;
+    width: 100%;
+}.precio p{
+    font-size:12px
+}
+}
+
+@media (max-width: 768px) {
+   body {
+    margin:0rem;
+     
+}
+
+.container{
+    padding:10px;
+}
+.gran-contenedor {
+  
+    padding:0rem;
+}
+.precio {
+    position: absolute;
+    bottom: 0;
+    background: #1c1c1c;
+    padding: 3px;
+    width: 100%;
+}.precio p{
+    font-size:12px
+}
+
+}
+
+
+
+@media (min-width: 450px) and (max-width: 768px) {
+    
+       .container{
+        width:100% !important;
+    }
+    .gran-contenedor {
+  
+    gap:0px;
+}
+
+.lista-rectanculos {
+    display: grid
+;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+.lista-rectanculos .caja-rectangulo img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.capedu-nombre p {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0px;
+    text-align: center;
+}
+
+.capedu-nombre span {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0px;
+    text-align: center;
+}
+.circulo-valhalla {
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+}
+.caja-red {
+    cursor: pointer;
+    width:28px;
+}
+.precio {
+    position: absolute;
+    bottom: 0;
+    background: #1c1c1c;
+    padding: 3px;
+    width: 100%;
+}.precio p{
+    font-size:12px
+} 
+}
+
+
+
+
+
+@media (min-width: 375px) and (max-width: 450px) {
+    
+       .container{
+        width:100% !important;
+    }
+    .gran-contenedor {
+  
+    gap:0px;
+}
+
+.lista-rectanculos {
+    display: grid
+;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+.lista-rectanculos .caja-rectangulo img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.capedu-nombre p {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0px;
+    text-align: center;
+}
+
+.capedu-nombre span {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0px;
+    text-align: center;
+}
+.circulo-valhalla {
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+}
+.caja-red {
+    cursor: pointer;
+    width:28px;
+}
+.precio {
+    position: absolute;
+    bottom: 0;
+    background: #1c1c1c;
+    padding: 3px;
+    width: 100%;
+}.precio p{
+    font-size:12px
+}  
+}
+
+@media (max-width: 375px) {
+    .container{
+        width:100% !important;
+    }
+    .gran-contenedor {
+  
+    gap:0px;
+}
+
+.lista-rectanculos {
+    display: grid
+;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+.lista-rectanculos .caja-rectangulo img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.capedu-nombre p {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0px;
+    text-align: center;
+}
+
+.capedu-nombre span {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0px;
+    text-align: center;
+}
+.circulo-valhalla {
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+}
+.caja-red {
+    cursor: pointer;
+    width:28px;
+}
+
+.caja-red svg {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, fill 0.3s ease; /* Transición suave */
+}
+.precio {
+    position: absolute;
+    bottom: 0;
+    background: #1c1c1c;
+    padding: 3px;
+    width: 100%;
+}.precio p{
+    font-size:12px
+}
+
+}
